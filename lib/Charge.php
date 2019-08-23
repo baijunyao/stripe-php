@@ -62,7 +62,7 @@ class Charge extends ApiResource
 
     /**
      * Possible string representations of decline codes.
-     * These strings are applicable to the decline_code property of the \Stripe\Error\Card exception.
+     * These strings are applicable to the decline_code property of the \Stripe\Exception\CardException exception.
      * @link https://stripe.com/docs/declines/codes
      */
     const DECLINED_APPROVE_WITH_ID                   = 'approve_with_id';

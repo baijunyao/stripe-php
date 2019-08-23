@@ -12,7 +12,7 @@ trait Request
     /**
      * @param array|null|mixed $params The list of parameters to validate
      *
-     * @throws \Stripe\Error\Api if $params exists and is not an array
+     * @throws \Stripe\Exception\InvalidArgumentException if $params exists and is not an array
      */
     protected static function _validateParams($params = null)
     {
@@ -21,7 +21,7 @@ trait Request
                . "method calls.  (HINT: an example call to create a charge "
                . "would be: \"Stripe\\Charge::create(['amount' => 100, "
                . "'currency' => 'usd', 'source' => 'tok_1234'])\")";
-            throw new \Stripe\Error\Api($message);
+            throw new \Stripe\Exception\InvalidArgumentException($message);
         }
     }
 
